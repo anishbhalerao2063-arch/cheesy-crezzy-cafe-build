@@ -123,7 +123,7 @@ const Menu = () => {
               <Button
                 variant="secondary"
                 className="relative"
-                onClick={() => navigate("/cart")}
+                onClick={() => navigate("/cart", { state: { cart } })}
               >
                 <ShoppingCart className="h-5 w-5" />
                 {cartItemCount > 0 && (
@@ -216,7 +216,7 @@ const Menu = () => {
           <Button
             size="lg"
             className="rounded-full shadow-2xl h-16 w-16 bg-secondary hover:bg-secondary/90"
-            onClick={() => navigate("/cart")}
+            onClick={() => navigate("/cart", { state: { cart } })}
           >
             <div className="relative">
               <ShoppingCart className="h-6 w-6" />
